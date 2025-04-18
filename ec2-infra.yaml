@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+
+  MyEC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t2.micro
+      KeyName: MANDEEP-KEY
+      ImageId: ami-0d68d8cc09feec3b1
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+          SubnetId: subnet-0b35aad6e0809e70a
+          GroupSet:
+            - sg-08bdfc852e142b299
+      UserData: "IAo+PiAjIS9iaW4vYmFzaCAKPj4geXVtIHVwZGF0ZSAteSAKPj4geXVtIGluc3RhbGwgLXkgaHR0cGQgCj4+IHdnZXQgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2FrdWxhc2F0aGlzaC9zYXRoaXNoLWh0bWwvbWFpbi9pbmRleC5odG1sIC1PIAovdmFyL3d3dy9odG1sL2luZGV4Lmh0bWwgCj4+IHN5c3RlbWN0bCBzdGFydCBodHRwZCAKPj4gc3lzdGVtY3RsIGVuYWJsZSBodHRwZCAKPj4g=="
+      Tags:
+        - Key: Name
+          Value: SimpleHTMLApp
+
+Outputs:
+  EC2InstancePublicIP:
+    Description: 'Public IP of the EC2 instance'
+    Value: !GetAtt MyEC2Instance.PublicIp
+  WebsiteURL:
+    Value: !Sub 'http://${MyEC2Instance.PublicDnsName}'
+    Description: 'URL to access the HTML app on EC2'

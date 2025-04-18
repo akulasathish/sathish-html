@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 STACK_NAME="simple-html-app-stack"
 AWS_REGION="ap-south-1"  # Updated region to ap-south-1
@@ -52,7 +52,7 @@ ssh -i MANDEEP-KEY.pem -o StrictHostKeyChecking=no ec2-user@$INSTANCE_IP << EOF
   sudo chmod 755 /var/www/html
 
   # Download and place index.html from new repo
-  sudo wget https://raw.githubusercontent.com/akulasathish/sathish-html/main/index.html -O /var/www/html/index.html
+  sudo wget https://raw.githubusercontent.com/akulasathish/html-sathish/main/index.html -O /var/www/html/index.html
 EOF
 
 echo "Deployment complete."

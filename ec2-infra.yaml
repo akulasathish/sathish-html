@@ -13,7 +13,7 @@ Resources:
           SubnetId: subnet-0b35aad6e0809e70a
           GroupSet:
             - sg-08bdfc852e142b299
-      UserData: "IAo+PiAjIS9iaW4vYmFzaCAKPj4geXVtIHVwZGF0ZSAteSAKPj4geXVtIGluc3RhbGwgLXkgaHR0cGQgCj4+IHdnZXQgaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2FrdWxhc2F0aGlzaC9zYXRoaXNoLWh0bWwvbWFpbi9pbmRleC5odG1sIC1PIAovdmFyL3d3dy9odG1sL2luZGV4Lmh0bWwgCj4+IHN5c3RlbWN0bCBzdGFydCBodHRwZCAKPj4gc3lzdGVtY3RsIGVuYWJsZSBodHRwZCAKPj4g=="
+      UserData: "IyEvYmluL2Jhc2gKeXVtIHVwZGF0ZSAteQp5dW0gaW5zdGFsbCAteSBodHRwZAp3Z2V0IGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9ha3VsYXNhdGhpc2gvaHRtbC1zYXRoaXNoL21haW4vaW5kZXguaHRtbCAtTyAvdmFyL3d3dy9odG1sL2luZGV4Lmh0bWwKc3lzdGVtY3RsIHN0YXJ0IGh0dHBkCnN5c3RlbWN0bCBlbmFibGUgaHR0cGQ="
       Tags:
         - Key: Name
           Value: SimpleHTMLApp
